@@ -20,7 +20,6 @@ class AestheticClockView: ScreenSaverView {
 
     override func animateOneFrame() {
         super.animateOneFrame()
-        
         setNeedsDisplay(bounds)
     }
 
@@ -31,20 +30,23 @@ class AestheticClockView: ScreenSaverView {
     }
     
     private func drawTime(_ color: NSColor) {
-        let date = Date()
-        let calendar = Calendar.current
-        let hour = String(format: "%02d", calendar.component(.hour, from: date))
-        let minutes = String(format: "%02d", calendar.component(.minute, from: date))
-        let seconds = String(format: "%02d", calendar.component(.second, from: date))
-        let timeString = "\(hour) \(minutes) \(seconds)"
-        let paragraph = NSMutableParagraphStyle()
-        paragraph.alignment = .center
+        let timeString = "\(getCalendarComponent(.hour)) \(getCalendarComponent(.minute)) \(getCalendarComponent(.second))"
+
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .center
+
+        let baselineOffset = -(bounds.height - (bounds.width/4)) / 2
+
+        let fontName = "HelveticaNeue-UltraLight"
+        let fontSize = bounds.width / 5
+        let font = NSFont(name: fontName, size: fontSize)
+
         let string = NSAttributedString(
             string: timeString,
             attributes: [
-                NSAttributedString.Key.baselineOffset: -(bounds.height-(bounds.width/5))/2,
-                NSAttributedString.Key.paragraphStyle: paragraph,
-                NSAttributedString.Key.font: NSFont(name: "HelveticaNeue-UltraLight", size: bounds.width / 5),
+                NSAttributedString.Key.baselineOffset: baselineOffset,
+                NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                NSAttributedString.Key.font: font,
                 NSAttributedString.Key.foregroundColor: color
             ]
         )
@@ -67,18 +69,10 @@ class AestheticClockView: ScreenSaverView {
         }
     }
     
-    func printFamilyNames() -> String {
-        let fontManager = NSFontManager.shared
-        var array = [String]()
-        for family in fontManager.availableFontFamilies {
-            if let fonts = fontManager.availableMembers(ofFontFamily: family) {
-                for font in fonts {
-                    if font.description.contains("HelveticaNeue-UltraLight") {
-                        array.append(font.description)
-                    }
-                }
-            }
-        }
-        return array.joined(separator: "\n")
+    private func getCalendarComponent(_ component: Calendar.Component) -> String {
+        let date = Date()
+        let calendar = Calendar.current
+
+        return String(format: "%02d", calendar.component(component, from: date))
     }
 }

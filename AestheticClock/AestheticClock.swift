@@ -39,7 +39,7 @@ class AestheticClockView: ScreenSaverView {
 
         let fontName = "HelveticaNeue-UltraLight"
         let fontSize = bounds.width / 5
-        let font = NSFont(name: fontName, size: fontSize)
+        guard let font = NSFont(name: fontName, size: fontSize) else { return }
 
         let string = NSAttributedString(
             string: timeString,

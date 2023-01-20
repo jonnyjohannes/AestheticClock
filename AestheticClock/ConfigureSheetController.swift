@@ -37,5 +37,4 @@ class ConfigureSheetController : NSObject {
     @IBAction func closeButtonClicked(_ sender: Any) {
         window?.sheetParent?.endSheet(window!)
     }
-
 }

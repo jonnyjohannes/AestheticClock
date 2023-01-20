@@ -5,9 +5,7 @@
 //  Created by Jonny on 1/16/23.
 //
 
-import Foundation
 import ScreenSaver
-import OSLog
 
 enum Themes : String, CaseIterable {
     case dark = "Dark Mode"

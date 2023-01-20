@@ -12,7 +12,7 @@
 		8A2A3CFD294828EE0056BBDB /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3CFC294828EE0056BBDB /* thumbnail.png */; };
 		8A7C1FF92975E8B800FEE84D /* ConfigureSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C1FF82975E8B800FEE84D /* ConfigureSheetController.swift */; };
 		8A7C1FFB2975E92500FEE84D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C1FFA2975E92500FEE84D /* Preferences.swift */; };
-		8A7C1FFD2975ECBE00FEE84D /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7C1FFC2975ECBE00FEE84D /* ConfigureSheet.xib */; };
+		8A859B90297A32A600B63137 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A859B8F297A32A600B63137 /* ConfigureSheet.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,7 @@
 		8A2A3CFC294828EE0056BBDB /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 		8A7C1FF82975E8B800FEE84D /* ConfigureSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureSheetController.swift; sourceTree = "<group>"; };
 		8A7C1FFA2975E92500FEE84D /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
-		8A7C1FFC2975ECBE00FEE84D /* ConfigureSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
+		8A859B8F297A32A600B63137 /* ConfigureSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 				8A2A3CFC294828EE0056BBDB /* thumbnail.png */,
 				8A7C1FF82975E8B800FEE84D /* ConfigureSheetController.swift */,
 				8A7C1FFA2975E92500FEE84D /* Preferences.swift */,
-				8A7C1FFC2975ECBE00FEE84D /* ConfigureSheet.xib */,
+				8A859B8F297A32A600B63137 /* ConfigureSheet.xib */,
 			);
 			path = AestheticClock;
 			sourceTree = "<group>";
@@ -136,7 +136,7 @@
 			files = (
 				8A2A3CFD294828EE0056BBDB /* thumbnail.png in Resources */,
 				8A2A3CFB294010350056BBDB /* HelveticaNeue-UltraLight.otf in Resources */,
-				8A7C1FFD2975ECBE00FEE84D /* ConfigureSheet.xib in Resources */,
+				8A859B90297A32A600B63137 /* ConfigureSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

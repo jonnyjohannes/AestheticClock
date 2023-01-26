@@ -3,7 +3,7 @@ import ScreenSaver
 
 class AestheticClockView: ScreenSaverView {
     
-    var sheetController: ConfigureSheetController = ConfigureSheetController()
+    lazy var sheetController: ConfigureSheetController = ConfigureSheetController()
     var preferences: Preferences = Preferences()
     
     // MARK: - init
@@ -98,7 +98,7 @@ class AestheticClockView: ScreenSaverView {
         let calendar = Calendar.current
 
         if (.hour == component && Formats.mod12.rawValue == preferences.getPref(key: Formats.typeName)) {
-            return String(format: "% 2d", calendar.component(component, from: date) % 12)
+            return String(format: "% 2d", ((calendar.component(component, from: date) + 11) % 12) + 1)
         }
         return String(format: "%02d", calendar.component(component, from: date))
     }

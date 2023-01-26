@@ -18,7 +18,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="344" y="373" width="480" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="3008" height="1667"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1800" height="1125"/>
             <view key="contentView" id="fMo-ya-Atc">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>

@@ -10,7 +10,9 @@
 		8A2A3C7B293464C60056BBDB /* AestheticClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2A3C7A293464C60056BBDB /* AestheticClock.swift */; };
 		8A2A3CFB294010350056BBDB /* HelveticaNeue-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3CFA294010350056BBDB /* HelveticaNeue-UltraLight.otf */; };
 		8A2A3CFD294828EE0056BBDB /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3CFC294828EE0056BBDB /* thumbnail.png */; };
-		8A2A3CFF294828F50056BBDB /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2A3CFE294828F50056BBDB /* thumbnail@2x.png */; };
+		8A7C1FF92975E8B800FEE84D /* ConfigureSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C1FF82975E8B800FEE84D /* ConfigureSheetController.swift */; };
+		8A7C1FFB2975E92500FEE84D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C1FFA2975E92500FEE84D /* Preferences.swift */; };
+		8A859B90297A32A600B63137 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A859B8F297A32A600B63137 /* ConfigureSheet.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,7 +20,9 @@
 		8A2A3C7A293464C60056BBDB /* AestheticClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AestheticClock.swift; sourceTree = "<group>"; };
 		8A2A3CFA294010350056BBDB /* HelveticaNeue-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeue-UltraLight.otf"; sourceTree = "<group>"; };
 		8A2A3CFC294828EE0056BBDB /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
-		8A2A3CFE294828F50056BBDB /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
+		8A7C1FF82975E8B800FEE84D /* ConfigureSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureSheetController.swift; sourceTree = "<group>"; };
+		8A7C1FFA2975E92500FEE84D /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		8A859B8F297A32A600B63137 /* ConfigureSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,9 @@
 				8A2A3C7A293464C60056BBDB /* AestheticClock.swift */,
 				8A2A3CFA294010350056BBDB /* HelveticaNeue-UltraLight.otf */,
 				8A2A3CFC294828EE0056BBDB /* thumbnail.png */,
-				8A2A3CFE294828F50056BBDB /* thumbnail@2x.png */,
+				8A7C1FF82975E8B800FEE84D /* ConfigureSheetController.swift */,
+				8A7C1FFA2975E92500FEE84D /* Preferences.swift */,
+				8A859B8F297A32A600B63137 /* ConfigureSheet.xib */,
 			);
 			path = AestheticClock;
 			sourceTree = "<group>";
@@ -130,7 +136,7 @@
 			files = (
 				8A2A3CFD294828EE0056BBDB /* thumbnail.png in Resources */,
 				8A2A3CFB294010350056BBDB /* HelveticaNeue-UltraLight.otf in Resources */,
-				8A2A3CFF294828F50056BBDB /* thumbnail@2x.png in Resources */,
+				8A859B90297A32A600B63137 /* ConfigureSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A2A3C7B293464C60056BBDB /* AestheticClock.swift in Sources */,
+				8A7C1FF92975E8B800FEE84D /* ConfigureSheetController.swift in Sources */,
+				8A7C1FFB2975E92500FEE84D /* Preferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +192,11 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9H2Z94CKYH;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -244,8 +255,11 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9H2Z94CKYH;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -267,9 +281,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -287,6 +300,7 @@
 				MARKETING_VERSION = "0.0.1-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = lsj2.AestheticClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -299,9 +313,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development: Jonathan Johannes (GKALR3XTJ3)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -319,6 +332,7 @@
 				MARKETING_VERSION = "0.0.1-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = lsj2.AestheticClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 4.0;

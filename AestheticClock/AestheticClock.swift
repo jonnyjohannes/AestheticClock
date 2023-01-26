@@ -3,6 +3,11 @@ import ScreenSaver
 
 class AestheticClockView: ScreenSaverView {
     
+    lazy var sheetController: ConfigureSheetController = ConfigureSheetController()
+    var preferences: Preferences = Preferences()
+    
+    // MARK: - init
+
     override init?(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
         registerCustomFonts()
@@ -13,9 +18,26 @@ class AestheticClockView: ScreenSaverView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - configs
+
+    override public var hasConfigureSheet: Bool {
+        return true
+    }
+    
+    override public var configureSheet: NSWindow? {
+        return sheetController.window
+    }
+    
+    // MARK: - animations
+    
     override func draw(_ rect: NSRect) {
-        drawBackground(.black)
-        drawTime(.white)
+        if (Themes.dark.rawValue == preferences.getPref(key: Themes.typeName)) {
+            drawBackground(.black)
+            drawTime(.white)
+        } else {
+            drawBackground(.white)
+            drawTime(.black)
+        }
     }
 
     override func animateOneFrame() {
@@ -53,6 +75,8 @@ class AestheticClockView: ScreenSaverView {
         string.draw(in: bounds)
     }
     
+    // MARK: - helpers
+
     private func registerCustomFonts() {
         let paths = Bundle.main.paths(forResourcesOfType: "otf", inDirectory: "")
         for path in paths {
@@ -73,6 +97,9 @@ class AestheticClockView: ScreenSaverView {
         let date = Date()
         let calendar = Calendar.current
 
+        if (.hour == component && Formats.mod12.rawValue == preferences.getPref(key: Formats.typeName)) {
+            return String(format: "% 2d", ((calendar.component(component, from: date) + 11) % 12) + 1)
+        }
         return String(format: "%02d", calendar.component(component, from: date))
     }
 }

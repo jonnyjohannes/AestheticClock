@@ -56,6 +56,7 @@ class AestheticClockView: ScreenSaverView {
 
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
+        paragraphStyle.firstLineHeadIndent = 0
 
         let baselineOffset = -(bounds.height - (bounds.width/4)) / 2
 

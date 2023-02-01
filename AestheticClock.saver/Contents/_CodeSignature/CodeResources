@@ -4,17 +4,28 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/ConfigureSheet.nib</key>
+		<data>
+		KGt6pbg8tWt5ke0EcBwhxQmYbag=
+		</data>
 		<key>Resources/HelveticaNeue-UltraLight.otf</key>
 		<data>
 		L3Q4kC+OVbb/Fgx234pjudNVPXo=
 		</data>
-		<key>Resources/thumbnail.tiff</key>
+		<key>Resources/thumbnail.png</key>
 		<data>
-		m2B9/LRdIfGkrm3J0sCvekWZtOI=
+		4YDNL4mfZHd9CDP2nDA0gWi63yE=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Resources/ConfigureSheet.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GacieqgIa8OdduWhg3Ut26ZpsQ9HV+cAW/eyw0Du2lc=
+			</data>
+		</dict>
 		<key>Resources/HelveticaNeue-UltraLight.otf</key>
 		<dict>
 			<key>hash2</key>
@@ -22,11 +33,11 @@
 			DKcqT4M0aGYJj/et5gxMzDK7bKjuSxrs3awIMJjkAP8=
 			</data>
 		</dict>
-		<key>Resources/thumbnail.tiff</key>
+		<key>Resources/thumbnail.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XEZM3lcpzQrceh7beC89jRwoUxagqd7NHw4VDwbQRfI=
+			9GF54HLO2TWc+Q4VmjEz/o0GXCoPvfpvnofWo7RyeWc=
 			</data>
 		</dict>
 	</dict>

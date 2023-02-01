@@ -22,18 +22,18 @@ class ConfigureSheetController : NSObject {
         formatSelection.selectItem(withTitle: preferences.getPref(key: Formats.typeName) ?? Formats.mod24.rawValue)
     }
     
-    @IBOutlet weak var themeSelection: NSPopUpButton!
+    @IBOutlet var themeSelection: NSPopUpButton!
     @IBAction func updateTheme(_ sender: Any) {
         preferences.setPref(key: Themes.typeName, value: themeSelection.selectedItem?.title ?? Themes.dark.rawValue)
 
     }
     
-    @IBOutlet weak var formatSelection: NSPopUpButton!
+    @IBOutlet var formatSelection: NSPopUpButton!
     @IBAction func updateFormat(_ sender: Any) {
         preferences.setPref(key: Formats.typeName, value: formatSelection.selectedItem?.title ?? Formats.mod24.rawValue)
     }
 
-    @IBOutlet weak var window: NSWindow!
+    @IBOutlet var window: NSWindow!
     @IBAction func closeButtonClicked(_ sender: Any) {
         window?.sheetParent?.endSheet(window!)
     }
